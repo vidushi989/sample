@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://apiIDBrowse.caption"
+        focusComponent="apiIDsTable"
+        messagesPack="com.company.tables.web.apiid">
+    <data readOnly="true">
+        <collection id="apiIDsDc"
+                    class="com.company.tables.entity.ApiID"
+        >
+            <view extends="_local"/>
+            <loader id="apiIDsDl">
+                <query>
+                    <![CDATA[select e from tables_ApiID e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="apiIDsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="apiIDsTable"
+                dataLoader="apiIDsDl">
+            <properties include=".*"/>
+        </filter>
+        <table id="apiIDsTable"
+               width="100%"
+               dataContainer="apiIDsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="apiClassification"/>
+                <column id="apiImplementationPattern"/>
+                <column id="apiIntDestinationSystemApiOnly"/>
+                <column id="apiIntSourceAppExperienceApiOnly"/>
+                <column id="apiProcessingType"/>
+                <column id="apiSpecialOps"/>
+                <column id="designPattern"/>
+                <column id="integrationPlatformAbreviation"/>
+                <column id="integrationPlatformVersion"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="apiIDsTable.create"/>
+                <button id="editBtn" action="apiIDsTable.edit"/>
+                <button id="removeBtn" action="apiIDsTable.remove"/>
+            </buttonsPanel>
+        </table>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

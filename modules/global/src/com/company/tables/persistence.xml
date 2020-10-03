@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="tables" transaction-type="RESOURCE_LOCAL">
+
+        <class>com.company.tables.entity.StatusLifecycle</class>
+        <class>com.company.tables.entity.Sl</class>
+        <class>com.company.tables.entity.ApiImplDef</class>
+        <class>com.company.tables.entity.ApiID</class>
+    </persistence-unit>
+</persistence>

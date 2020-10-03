@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://apiIDEdit.caption"
+        focusComponent="form"
+        messagesPack="com.company.tables.web.apiid">
+    <data>
+        <instance id="apiIDDc"
+                  class="com.company.tables.entity.ApiID"
+        >
+            <view extends="_local"/>
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="apiIDDc">
+            <column width="350px">
+                <textField id="apiClassificationField" property="apiClassification"/>
+                <textField id="apiImplementationPatternField" property="apiImplementationPattern"/>
+                <textField id="apiIntDestinationSystemApiOnlyField" property="apiIntDestinationSystemApiOnly"/>
+                <textField id="apiIntSourceAppExperienceApiOnlyField" property="apiIntSourceAppExperienceApiOnly"/>
+                <textField id="apiProcessingTypeField" property="apiProcessingType"/>
+                <textField id="apiSpecialOpsField" property="apiSpecialOps"/>
+                <textField id="designPatternField" property="designPattern"/>
+                <textField id="integrationPlatformAbreviationField" property="integrationPlatformAbreviation"/>
+                <textField id="integrationPlatformVersionField" property="integrationPlatformVersion"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

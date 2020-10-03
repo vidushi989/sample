@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-tables" insertBefore="administration" caption="mainMsg://menu_config.application-tables">
+        <item screen="tables_StatusLifecycle.browse" caption="mainMsg://menu_config.tables_StatusLifecycle.browse"/>
+        <item screen="tables_Sl.browse" caption="mainMsg://menu_config.tables_Sl.browse"/>
+        <item screen="tables_ApiImplDef.browse" caption="mainMsg://menu_config.tables_ApiImplDef.browse"/>
+        <item screen="tables_ApiID.browse" caption="mainMsg://menu_config.tables_ApiID.browse"/>
+    </menu>
+</menu-config>
